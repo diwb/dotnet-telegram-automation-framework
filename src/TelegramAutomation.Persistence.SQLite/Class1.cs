@@ -1,0 +1,1 @@
+namespace TelegramAutomation.Persistence.SQLite;

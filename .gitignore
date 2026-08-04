@@ -7,9 +7,10 @@ artifacts/
 *.coverage
 *.coveragexml
 *.db
-*.sqlite
+*.sqlite`r`n!src/TelegramAutomation.Persistence.SQLite/`r`n!src/TelegramAutomation.Persistence.SQLite/**`r`n!src/TelegramAutomation.Storage.Sqlite/`r`n!src/TelegramAutomation.Storage.Sqlite/**
 .env
 *.log
 *.user
 *.suo
 coverage.cobertura.xml
+
