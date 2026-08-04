@@ -1,10 +1,13 @@
-﻿# Final Audit
+# Final Audit
 
-Date: 2026-08-03
+Date: 2026-08-04
 OS: Windows 10.0.26200
 SDK: .NET SDK 10.0.110
-Repository URL: git@github.com-diwb:diwb/dotnet-telegram-automation-framework.git
+Repository HTTPS URL: https://github.com/diwb/dotnet-telegram-automation-framework
+Repository SSH URL: git@github.com-diwb:diwb/dotnet-telegram-automation-framework.git
+Default branch: main
 Current branch: fix/telegram-framework-hardening
+Validated implementation commit: e9009ef64fd4fce906488369af6c51c9f19fa69f
 Telegram Bot API version: 10.2, 2026-07-14
 Telegram.Bot package version: 22.10.2.1
 
@@ -80,4 +83,11 @@ Generated in `artifacts/packages`:
 
 ## Remote Publication
 
-Remote publication, GitHub CI/CodeQL run URLs, default branch verification and GitHub release URL are filled after push and release creation.
+Repository publication was completed to the GitHub repository above.
+
+- Default branch verified on GitHub: main
+- Hardening branch published: fix/telegram-framework-hardening
+- CI run: https://github.com/diwb/dotnet-telegram-automation-framework/actions/runs/30865181742
+- CodeQL run: https://github.com/diwb/dotnet-telegram-automation-framework/actions/runs/30865181765
+- Release: https://github.com/diwb/dotnet-telegram-automation-framework/releases/tag/v1.0.0
+- Release assets: 22 NuGet packages/source-symbol packages plus SHA256SUMS.txt
