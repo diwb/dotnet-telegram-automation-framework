@@ -1,0 +1,5 @@
+﻿<Project>
+  <ItemGroup>
+    <!-- Package versions are currently kept in project files because xUnit templates generated explicit versions. -->
+  </ItemGroup>
+</Project>

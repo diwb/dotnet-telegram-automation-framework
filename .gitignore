@@ -1,0 +1,15 @@
+﻿bin/
+obj/
+TestResults/
+artifacts/
+.coverage/
+*.trx
+*.coverage
+*.coveragexml
+*.db
+*.sqlite
+.env
+*.log
+*.user
+*.suo
+coverage.cobertura.xml

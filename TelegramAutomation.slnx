@@ -1,0 +1,25 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TelegramAutomation.Abstractions/TelegramAutomation.Abstractions.csproj" />
+    <Project Path="src/TelegramAutomation.Cli/TelegramAutomation.Cli.csproj" />
+    <Project Path="src/TelegramAutomation.Core/TelegramAutomation.Core.csproj" />
+    <Project Path="src/TelegramAutomation.FakeTelegramApi/TelegramAutomation.FakeTelegramApi.csproj" />
+    <Project Path="src/TelegramAutomation.Observability/TelegramAutomation.Observability.csproj" />
+    <Project Path="src/TelegramAutomation.Persistence.SQLite/TelegramAutomation.Persistence.SQLite.csproj" />
+    <Project Path="src/TelegramAutomation.Polling/TelegramAutomation.Polling.csproj" />
+    <Project Path="src/TelegramAutomation.Samples.EchoBot/TelegramAutomation.Samples.EchoBot.csproj" />
+    <Project Path="src/TelegramAutomation.Samples.WebhookHost/TelegramAutomation.Samples.WebhookHost.csproj" />
+    <Project Path="src/TelegramAutomation.Samples.WorkflowBot/TelegramAutomation.Samples.WorkflowBot.csproj" />
+    <Project Path="src/TelegramAutomation.Scheduling/TelegramAutomation.Scheduling.csproj" />
+    <Project Path="src/TelegramAutomation.Storage.InMemory/TelegramAutomation.Storage.InMemory.csproj" />
+    <Project Path="src/TelegramAutomation.Storage.Sqlite/TelegramAutomation.Storage.Sqlite.csproj" />
+    <Project Path="src/TelegramAutomation.Telegram/TelegramAutomation.Telegram.csproj" />
+    <Project Path="src/TelegramAutomation.Webhooks/TelegramAutomation.Webhooks.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TelegramAutomation.ArchitectureTests/TelegramAutomation.ArchitectureTests.csproj" />
+    <Project Path="tests/TelegramAutomation.IntegrationTests/TelegramAutomation.IntegrationTests.csproj" />
+    <Project Path="tests/TelegramAutomation.SecurityTests/TelegramAutomation.SecurityTests.csproj" />
+    <Project Path="tests/TelegramAutomation.UnitTests/TelegramAutomation.UnitTests.csproj" />
+  </Folder>
+</Solution>
