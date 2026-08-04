@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\TelegramAutomation.Abstractions\TelegramAutomation.Abstractions.csproj" />
+    <ProjectReference Include="..\TelegramAutomation.Core\TelegramAutomation.Core.csproj" />
+    <ProjectReference Include="..\TelegramAutomation.Storage.InMemory\TelegramAutomation.Storage.InMemory.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>

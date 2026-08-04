@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\TelegramAutomation.Abstractions\TelegramAutomation.Abstractions.csproj" />
+    <ProjectReference Include="..\TelegramAutomation.Core\TelegramAutomation.Core.csproj" />
+    <ProjectReference Include="..\TelegramAutomation.Storage.InMemory\TelegramAutomation.Storage.InMemory.csproj" />
+    <ProjectReference Include="..\TelegramAutomation.Scheduling\TelegramAutomation.Scheduling.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
