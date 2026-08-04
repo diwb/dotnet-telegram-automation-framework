@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.4" />
+    <PackageReference Include="coverlet.msbuild" Version="6.0.4">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\TelegramAutomation.Abstractions\TelegramAutomation.Abstractions.csproj" />
+    <ProjectReference Include="..\..\src\TelegramAutomation.Core\TelegramAutomation.Core.csproj" />
+    <ProjectReference Include="..\..\src\TelegramAutomation.Telegram\TelegramAutomation.Telegram.csproj" />
+    <ProjectReference Include="..\..\src\TelegramAutomation.Storage.InMemory\TelegramAutomation.Storage.InMemory.csproj" />
+    <ProjectReference Include="..\..\src\TelegramAutomation.Scheduling\TelegramAutomation.Scheduling.csproj" />
+    <ProjectReference Include="..\..\src\TelegramAutomation.FakeTelegramApi\TelegramAutomation.FakeTelegramApi.csproj" />
+    <ProjectReference Include="..\..\src\TelegramAutomation.Polling\TelegramAutomation.Polling.csproj" />
+    <ProjectReference Include="..\..\src\TelegramAutomation.Webhooks\TelegramAutomation.Webhooks.csproj" />
+    <ProjectReference Include="..\..\src\TelegramAutomation.Persistence.SQLite\TelegramAutomation.Persistence.SQLite.csproj" />
+    <ProjectReference Include="..\..\src\TelegramAutomation.Cli\TelegramAutomation.Cli.csproj" />
+  </ItemGroup>
+
+</Project>
