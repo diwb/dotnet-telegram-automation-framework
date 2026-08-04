@@ -1,0 +1,37 @@
+﻿name: ci
+on:
+  push:
+    branches: [main, fix/telegram-framework-hardening]
+  pull_request:
+    branches: [main]
+jobs:
+  build-test-pack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 10.0.x
+      - run: dotnet restore TelegramAutomation.slnx
+      - run: dotnet format TelegramAutomation.slnx --verify-no-changes --verbosity minimal
+      - run: dotnet build TelegramAutomation.slnx -c Release --no-restore
+      - run: dotnet test TelegramAutomation.slnx -c Release --no-build
+      - name: Coverage gate - core modules
+        run: dotnet test tests/TelegramAutomation.UnitTests/TelegramAutomation.UnitTests.csproj -c Release --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Include=[TelegramAutomation.Abstractions]*%2c[TelegramAutomation.Core]*%2c[TelegramAutomation.Polling]*%2c[TelegramAutomation.Webhooks]*%2c[TelegramAutomation.Cli]*%2c[TelegramAutomation.Storage.InMemory]*%2c[TelegramAutomation.Scheduling]* /p:ExcludeByFile=**/Program.cs /p:Threshold=75 /p:ThresholdType=line /p:ThresholdStat=total
+      - name: Coverage gate - SQLite persistence
+        run: dotnet test tests/TelegramAutomation.IntegrationTests/TelegramAutomation.IntegrationTests.csproj -c Release --no-build /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Include=[TelegramAutomation.Persistence.SQLite]* /p:Threshold=70 /p:ThresholdType=line /p:ThresholdStat=total
+      - run: dotnet list TelegramAutomation.slnx package --vulnerable --include-transitive
+      - run: docker compose config
+      - run: docker compose build
+      - run: dotnet run --project src/TelegramAutomation.Cli -- doctor
+      - run: dotnet run --project src/TelegramAutomation.Cli -- fake-api health
+      - shell: pwsh
+        run: ./tools/scripts/package.ps1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: packages
+          path: artifacts/packages
+      - uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: tests/**/coverage.cobertura.xml

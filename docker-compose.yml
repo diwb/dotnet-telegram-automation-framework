@@ -1,0 +1,17 @@
+﻿services:
+  fake-telegram-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.fake
+    ports:
+      - "5080:8080"
+  webhook-host:
+    build:
+      context: .
+      dockerfile: Dockerfile.webhook
+    environment:
+      Telegram__WebhookSecret: local-secret-token-123
+    ports:
+      - "5090:8080"
+    depends_on:
+      - fake-telegram-api
